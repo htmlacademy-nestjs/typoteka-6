@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <button class="button button--colored header__button-new">Новая запись</button>
+      <div class="header__dropdown">
+        <a href="#" class="button button--burger header__burger">Открыть меню</a>
+        <ul class="navigation header__navigation">
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+        </ul>
+      </div>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main>
+      <section>
+        <div class="popup popup--new-publication popup--anti">
+          <div class="new-publication">
+            <form action="#" method="POST">
+              <div class="new-publication__header">
+                <h1>Новая публикация</h1>
+                <div class="new-publication__date-form">
+                  <h3>Дата публикации</h3>
+                  <div class="new-publication__date-form-division">
+                    <div class="new-publication__date-block">
+                      <label for="new-publication-date" aria-label="Календарь"></label>
+                      <input type="text" name="date" id="new-publication-date" placeholder="2019-03-21">
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="new-publication__button button button--colored">Опубликовать</button>
+              </div>
+              <a class="popup__button button button--popup-close" aria-label="Закрыть окно">Закрыть
+                окно</a>
+              <div class="new-publication__form form">
+                <div class="form__wrapper form__wrapper--intro">
+                  <div class="form__field">
+                    <label><input type="text" name="title" placeholder="Заголовок" value="Как правильно заводить машину" required=""></label>
+                  </div>
+                  <div class="form__field form__field--post-image">
+                    <label><input id="image-name-field" type="text" name="photo" value="moya_mashinka.jpg" placeholder="Фотография" readonly=""></label>
+                    <div class="form__image-loader form__image-loader--publication">
+                      <label><input class="visually-hidden" type="file" name="upload">Обзор</label>
+                    </div>
+                    <button class="button button--transparent">Удалить</button>
+                  </div>
+                  <div class="new-publication__category-wrapper">
+                    <div class="new-publication__checkbox new-publication__checkbox--auto">
+                      <input type="checkbox" name="category-1" id="checkbox-auto">
+                      <label for="checkbox-auto">Автомобили</label>
+                    </div>
+                    <a class="new-publication__form-link button button--transparent" href="#">Добавить категорию</a>
+                  </div>
+                </div>
+                <div class="form__wrapper form__wrapper--text">
+                  <div class="form__field form__field--publication-text">
+                    <label><textarea rows="5" name="announcement" placeholder="Анонс публикации">Материнский холдинг возглавит гендиректор Google Сундар Пичаи. При этом больше половины голосов в компании останется у Пейджа и Брина.</textarea></label>
+                  </div>
+                  <div class="form__field form__field--publication-text">
+                    <label><textarea rows="10" name="full-text" placeholder="Полный текст публикации">Основатели Google Ларри Пейдж и Сергей Брин отойдут от руководства материнским холдингом Alphabet, сказано в сообщении компании. Пейдж занимал пост гендиректора, а Брин — президента Alphabet.
+
+Alphabet возглавит гендиректор Google Сундар Пичаи, он также продолжит руководить Google. Должность президента холдинга будет упразднена.</textarea></label>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

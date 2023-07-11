@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__list-item">
+            <a class="header__registration" href="#">Регистрация</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__enter" href="#">Вход с паролем</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main>
+      <section class="post">
+        <h1 class="visually-hidden">Пост</h1>
+        <section class="post__content">
+          <h2 class="visually-hidden">Основное содержание</h2>
+          <div class="post__wrapper">
+            <div class="post__head">
+              <a href="#" class="post__backwards button button--backwards">Назад</a>
+              <time class="post__date" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+              <h2 class="post__title title title--main">AirPods в один клик</h2>
+            </div>
+            <div class="post__text">
+              <h3>Бирюзовое доверие</h3>
+              <p>У Apple иногда попадаются интерфейсы, за которые создателей хочется сильно
+                поругать
+                — к примеру интерфейс
+                публикации приложения в AppStore, для которого я уже неделю восстановливаю свой аккаунт разработчика.
+              </p>
+              <p>Или интерфейс подключения AirPods на макбуке. Чтобы переключить наушники между
+                телефоном и компьютером,
+                нужно сначала нажать на значок звука, затем дождаться, когда в списке устройств появятся наушники, потом
+                нажать на них и дождаться, пока случится вся магия подключения. Иногда по загадочным причинам магия не
+                случается, и операцию нужно повторить, выполняя все те же клики-ожидания-клики — бесит.</p>
+            </div>
+          </div>
+        </section>
+        <div class="post__wrapper post__wrapper--comments">
+          <section class="post__comments comments">
+            <h2 class="comments__title title title--middle">Комментарии отсутствуют</h2>
+            <div class="comments__footer comments__footer--visitor">
+              <button type="submit" class="comments__button button button--colored">Войти</button>
+              <div class="comments__registration">
+                <p class="text text--signature"><b class="title title--small">Регистрация</b>Чтобы присоединиться к
+                  переписке
+                  нужно зарегистрироваться</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

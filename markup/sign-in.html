@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__list-item">
+            <a class="header__popup" href="#">Регистрация</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__enter" href="#">Вход с паролем</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Регистрация пользователя</h1>
+      <section>
+        <div class="popup popup--registration popup--anti">
+          <a class="popup__button button button--popup-close" aria-label="Закрыть окно">Закрыть
+            окно</a>
+          <h2 class="popup__title">Войти</h2>
+          <div class="popup__form form form--log-in">
+            <form action="#" method="get">
+              <div class="form__field"><label><input type="email" name="email" placeholder="Электронная почта" required=""></label>
+              </div>
+
+              <div class="form__field"><label><input type="password" name="password" placeholder="Пароль" required=""></label></div>
+              <p class="form__error-message">Некоторая ошибка произошла, беда!</p>
+              <button class="form__submit-btn form__submit-btn--log-in button button--colored" type="submit">Войти</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

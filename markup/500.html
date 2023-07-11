@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper-color">
+    <header class="header header--error">
+      <a class="header__logo header__logo--500 logo" href="#">
+        <img src="img/icons/logo.svg" alt="логотип Тайпотеки">
+      </a>
+      <a class="header__registration" href="#">Регистрация</a>
+      <a class="header__enter" href="#">Вход с паролем</a>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main>
+      <h1 class="visually-hidden">Ошибка 500</h1>
+      <section class="error error--500">
+        <h2 class="error__title title title--big">Что-то пошло не так</h2>
+        <p class="error__text text text--big">Причин может быть много: сервер не выдержал нагрузку или в коде ошибка.
+          Попробуйте повторить попытку позже.</p>
+        <a class="error__link text text--big" href="main.html">Вернуться на главную</a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

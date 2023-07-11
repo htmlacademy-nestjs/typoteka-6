@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img src="img/icons/logo.svg" alt="логотип Тайпотеки">
+      </a>
+      <a class="header__registration" href="#">Регистрация</a>
+      <a class="header__enter" href="#">Вход с паролем</a>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main class="articles-category">
+      <h1>Бизнес</h1>
+      <section class="articles-category__theme-list">
+        <h2 class="visually-hidden">Список тем</h2>
+        <ul class="themes">
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Автомобили <sup>88</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Удаленная работа <sup>13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link themes__item-link--active">Бизнес <sup>13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Путешествия <sup>13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link themes__item-link--padding" href="#">Дизайн и обустройство <sup>13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Производство игрушек <sup>22</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">UX & UI <sup>22</sup></a>
+          </li>
+        </ul>
+      </section>
+      <section class="articles-category__list preview">
+        <h2 class="visually-hidden">Список превью статей</h2>
+        <ul class="preview__list">
+          <li class="preview__item">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Дизайн</a>
+              </li>
+            </ul>
+            <div class="preview__background">
+              <img class="preview__background-image" src="img/skyscraper@1x.jpg" width="460" height="240" srcset="img/skyscraper@1x.jpg 1x, img/skyscraper@2x.jpg 2x" alt="Фотография небоскреба">
+            </div>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Я ничего не понял</a>
+            </h3>
+            <p class="preview__text">Если вы сами пишете такие письма — почитайте Ильяхова.
+              А в этой заметке я расскажу про заклинание, которое от таких писем помогает.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+          <li class="preview__item">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Дизайн</a>
+              </li>
+            </ul>
+            <div class="preview__background">
+              <img class="preview__background-image" src="img/sea@1x.jpg" width="460" height="240" srcset="img/sea@1x.jpg 1x, img/sea@2x.jpg 2x" alt="Фотография моря">
+            </div>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Путешествие в Голландию</a>
+            </h3>
+            <p class="preview__text">Если вы сами пишете такие письма — почитайте Ильяхова.
+              А в этой заметке я расскажу про заклинание, которое от таких писем помогает.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+          <li class="preview__item preview__item--noimage">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Дизайн</a>
+              </li>
+            </ul>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Путин подписал закон о предустановке российских приложений на смартфоны и другую электронику</a>
+            </h3>
+            <p class="preview__text">Президент России Владимир Путин подписал закон об обязательной предустановке
+              российского программного
+              обеспечения на электронную технику, продаваемую в России. Документ опубликован на официальном сайте
+              правовой информации.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+          <li class="preview__item">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Дизайн</a>
+              </li>
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Удаленная работа</a>
+              </li>
+            </ul>
+            <div class="preview__background">
+              <img src="img/forest@1x.jpg" width="460" height="240" srcset="img/forest@1x.jpg 1x, img/forest@2x.jpg 2x" alt="Фотография леса">
+            </div>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Я понял, но не все</a>
+            </h3>
+            <p class="preview__text">Если вы сами пишете такие письма — почитайте Ильяхова.
+              А в этой заметке я расскажу про заклинание, которое от таких писем помогает.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

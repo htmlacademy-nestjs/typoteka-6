@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__list-item">
+            <a class="header__registration" href="#">Регистрация</a>
+          </li>
+          <li class="header__list-item">
+            <a class="header__enter" href="#">Вход с паролем</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__list-item">
+            <p>Алёна Фролова</p>
+          </li>
+          <li class="header__list-item">
+            <a class="header__exit" href="#">Выйти</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="header__avatar avatar">
+        <img src="img/avatar-2.png" alt="аватар пользователя">
+      </a>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <button class="button button--colored header__button-new">Новая запись</button>
+      <div class="header__dropdown">
+        <a href="#" class="button button--burger header__burger">Открыть меню</a>
+        <ul class="navigation header__navigation">
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+        </ul>
+      </div>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main class="main-page">
+      <h1 class="visually-hidden">Главная страница личного блога Типотека</h1>
+      <p>
+        Это приветственный текст, который владелец блога может выбрать, чтобы описать себя 👏
+      </p>
+      <section class="main-page__theme-list">
+        <h2 class="visually-hidden">Список тем</h2>
+        <ul class="themes">
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Автомобили <sup class="themes__link-sup">88</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Удаленная работа <sup class="themes__link-sup">13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Бизнес <sup class="themes__link-sup">13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Путешествия <sup class="themes__link-sup">13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link themes__item-link--padding" href="#">Дизайн и обустройство <sup class="themes__link-sup">13</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">Производство игрушек <sup class="themes__link-sup">22</sup></a>
+          </li>
+          <li class="themes__item">
+            <a class="themes__item-link" href="#">UX & UI <sup class="themes__link-sup">22</sup></a>
+          </li>
+        </ul>
+      </section>
+      <div class="main-page__section-flex main-page__section-flex--short">
+        <section class="main-page__hot hot">
+          <h2 class="hot__name hot__name--empty">Самое обсуждаемое <span class="hot__icon hot__icon--fire"></span></h2>
+          <p class="hot__empty">Здесь пока ничего нет...</p>
+        </section>
+        <section class="main-page__last last">
+          <h2 class="last__name">Последние комментарии <span class="last__icon last__icon--cloud"></span></h2>
+          <p class="last__empty">Здесь пока ничего нет...</p>
+        </section>
+      </div>
+      <section class="main-page__list preview">
+        <h2 class="visually-hidden">Список превью статей</h2>
+        <ul class="preview__list">
+          <li class="preview__item">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Дизайн</a>
+              </li>
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Удаленная работа</a>
+              </li>
+            </ul>
+            <div class="preview__background">
+              <img class="preview__background-image" src="img/skyscraper@1x.jpg" width="460" height="240" srcset="img/skyscraper@1x.jpg 1x, img/skyscraper@2x.jpg 2x" alt="Фотография Небоскреба">
+            </div>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Я ничего не понял</a>
+            </h3>
+            <p class="preview__text">Если вы сами пишете такие письма — почитайте Ильяхова.
+              А в этой заметке я расскажу про заклинание, которое от таких писем помогает.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+          <li class="preview__item">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Фриланс</a>
+              </li>
+            </ul>
+            <div class="preview__background">
+              <img class="preview__background-image" src="img/sea@1x.jpg" width="460" height="240" srcset="img/sea@1x.jpg 1x, img/sea@2x.jpg 2x" alt="Фотография моря">
+            </div>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Путешествие в Голландию</a>
+            </h3>
+            <p class="preview__text">Если вы сами пишете такие письма — почитайте Ильяхова.
+              А в этой заметке я расскажу про заклинание, которое от таких писем помогает.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+          <li class="preview__item preview__item--noimage">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Фриланс</a>
+              </li>
+            </ul>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Путин подписал закон о предустановке российских приложений на
+                смартфоны и другую
+                электронику</a>
+            </h3>
+            <p class="preview__text">Президент России Владимир Путин подписал закон об обязательной предустановке
+              российского программного
+              обеспечения на электронную технику, продаваемую в России. Документ опубликован на официальном сайте
+              правовой информации.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+          <li class="preview__item">
+            <ul class="preview__breadcrumbs">
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Дизайн</a>
+              </li>
+              <li class="preview__breadcrumbs-item">
+                <a class="preview__breadcrumbs-link" href="#">Удаленная работа</a>
+              </li>
+            </ul>
+            <div class="preview__background">
+              <img src="img/forest@1x.jpg" width="460" height="240" srcset="img/forest@1x.jpg 1x, img/forest@2x.jpg 2x" alt="Фотография леса">
+            </div>
+            <time class="preview__time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <h3 class="preview__name">
+              <a class="preview__name-link" href="#">Я понял, но не все</a>
+            </h3>
+            <p class="preview__text">Если вы сами пишете такие письма — почитайте Ильяхова.
+              А в этой заметке я расскажу про заклинание, которое от таких писем помогает.</p>
+            <a class="preview__comment" href="#">Комментарии <span class="preview__cloud"></span> <b class="preview__comment-count">12</b></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

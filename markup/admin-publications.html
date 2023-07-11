@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Личный блог Типотека">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Типотека</title>
+  <link rel="preload" href="./fonts/Inter-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Inter-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/SFProDisplay-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper wrapper--nobackground">
+    <header class="header">
+      <a class="header__logo logo" href="#">
+        <img class="logo__image" src="img/icons/logo-image-only.svg" alt="логотип Тайпотеки">
+        <span class="logo__name">Типотека</span>
+      </a>
+      <button class="button button--colored header__button-new">Новая запись</button>
+      <div class="header__dropdown">
+        <a href="#" class="button button--burger header__burger">Открыть меню</a>
+        <ul class="navigation header__navigation">
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+          <li class="navigation__item"><a href="main.html">Пункт меню</a></li>
+        </ul>
+      </div>
+      <a class="header__search button button--search" href="#" aria-label="поиск по сайту"></a>
+    </header>
+
+    <main class="main-page main-page--padding">
+      <section class="main-page__notes notes">
+        <h1 class="notes__title">Мои записи</h1>
+        <ul class="notes__list">
+          <li class="notes__list-item">
+            <time class="notes__item-time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <a class="notes__item-text" href="#">Huawei открыла в России предзаказ на смартфон Mate 30 Pro без сервисов Google</a>
+            <button class="notes__button button button--close-item" type="button"><span class="visually-hidden">Закрыть строку списка</span></button>
+          </li>
+          <li class="notes__list-item">
+            <time class="notes__item-time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <a class="notes__item-text" href="#">Facebook разрешит пользователям копировать фотографии из соцсети в «Google Фото»</a>
+            <button class="notes__button button button--close-item" type="button"><span class="visually-hidden">Закрыть строку списка</span></button>
+          </li>
+          <li class="notes__list-item">
+            <time class="notes__item-time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <a class="notes__item-text" href="#">Huawei открыла в России предзаказ на смартфон Mate 30 Pro без сервисов Google</a>
+            <button class="notes__button button button--close-item" type="button"><span class="visually-hidden">Закрыть строку списка</span></button>
+          </li>
+          <li class="notes__list-item">
+            <time class="notes__item-time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <a class="notes__item-text" href="#">Facebook разрешит пользователям копировать фотографии из соцсети в «Google Фото»</a>
+            <button class="notes__button button button--close-item" type="button"><span class="visually-hidden">Закрыть строку списка</span></button>
+          </li>
+          <li class="notes__list-item notes__list-item--last">
+            <time class="notes__item-time" datetime="2019-03-21T20:33">21.03.2019, 20:33</time>
+            <a class="notes__item-text" href="#">Facebook разрешит пользователям копировать фотографии из соцсети в «Google Фото»</a>
+            <button class="notes__button button button--close-item" type="button"><span class="visually-hidden">Закрыть строку списка</span></button>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__copyright" href="#" aria-label="HTMLAcademy">
+        <img src="img/icons/HTMLAcademyLogo.svg" width="112" height="50" alt="HTMLAcademy">
+      </a>
+      <span class="footer__dot"></span>
+      <p class="footer__text">Типотека, 2019</p>
+    </footer>
+  </div>
+
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
