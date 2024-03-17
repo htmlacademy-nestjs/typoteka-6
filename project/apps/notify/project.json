@@ -1,0 +1,24 @@
+{
+  "name": "notify",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/notify/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "notify:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "notify:build:development"
+        },
+        "production": {
+          "buildTarget": "notify:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
