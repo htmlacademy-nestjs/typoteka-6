@@ -1,0 +1,24 @@
+{
+  "name": "file-vault",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/file-vault/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "file-vault:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "file-vault:build:development"
+        },
+        "production": {
+          "buildTarget": "file-vault:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
