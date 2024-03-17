@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/blog/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "blog:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "blog:build:development"
+        },
+        "production": {
+          "buildTarget": "blog:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
