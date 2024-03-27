@@ -1,1 +1,1 @@
-export * from './lib/shared-core';
+// Ре-экспорт модулей из `./lib`
