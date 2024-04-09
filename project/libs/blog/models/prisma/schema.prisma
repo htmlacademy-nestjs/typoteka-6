@@ -14,13 +14,14 @@ datasource db {
 }
 
 model Post {
-  id          String   @id @default(uuid())
+  id          String   @id @default(uuid()) @map("id")
   title       String
   description String
   content     String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  userId      String
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  userId      String @map("user_id")
 
   @@index([title])
+  @@map("posts")
 }
