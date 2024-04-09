@@ -25,6 +25,20 @@
         "command": "npx prisma validate --schema ./schema.prisma",
         "cwd": "libs/blog/models/prisma"
       }
+    },
+    "db:migrate": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma migrate dev --schema ./schema.prisma --skip-generate --skip-seed",
+        "cwd": "libs/blog/models/prisma"
+      }
+    },
+    "db:reset": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npx prisma migrate reset --schema ./schema.prisma --force --skip-generate --skip-seed",
+        "cwd": "libs/blog/models/prisma"
+      }
     }
   },
   "tags": []
