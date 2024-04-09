@@ -15,6 +15,7 @@ datasource db {
 
 model Post {
   id          String   @id @default(uuid()) @map("id")
+  categories  Category[]
   title       String
   description String
   content     String
@@ -24,4 +25,14 @@ model Post {
 
   @@index([title])
   @@map("posts")
+}
+
+model Category {
+  id        String  @id @default(uuid())
+  title     String
+  posts     Post[]
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+  @@index([title])
+  @@map("categories")
 }
