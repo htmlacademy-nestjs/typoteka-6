@@ -18,6 +18,7 @@
     "paths": {
       "@project/account-config": ["libs/account/config/src/index.ts"],
       "@project/authentication": ["libs/account/authentication/src/index.ts"],
+      "@project/blog-category": ["libs/blog/blog-category/src/index.ts"],
       "@project/blog-models": ["libs/blog/models/src/index.ts"],
       "@project/blog-user": ["libs/account/blog-user/src/index.ts"],
       "@project/data-access": ["libs/shared/data-access/src/index.ts"],
