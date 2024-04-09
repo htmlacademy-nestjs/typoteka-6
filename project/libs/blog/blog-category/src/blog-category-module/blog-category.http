@@ -1,0 +1,38 @@
+# Get all categories
+GET http://localhost:3000/api/categories HTTP/1.1
+
+###
+
+# Get category by Id
+
+GET http://localhost:3000/api/categories/efd775e2-df55-4e0e-a308-58249f5ea202 HTTP/1.1
+
+###
+
+# Create a new category
+
+POST http://localhost:3000/api/categories HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Журналы"
+}
+
+###
+
+# Delete a category by id
+
+DELETE http://localhost:3000/api/categories/3ee2cc3b-81cc-4789-bb50-d20b73ec2c34 HTTP/1.1
+
+###
+
+# Update a category by id
+
+PATCH http://localhost:3000/api/categories/f39ed0ab-5129-4984-bd69-2ca375b55605 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "This is new title"
+}
+
+###
