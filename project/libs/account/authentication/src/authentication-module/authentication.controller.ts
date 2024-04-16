@@ -60,7 +60,7 @@ export class AuthenticationController {
   }
 
   @Get('/demo/:id')
-  public async demoPipe(@Param('id', ParseIntPipe) id: number) {
+  public async demoPipe(@Param('id') id: number) {
     console.log(typeof id);
   }
 }
