@@ -10,3 +10,8 @@ export const AuthenticationResponseMessage = {
   UserExist: 'User with the email already exists',
   UserCreated: 'The new user has been successfully created.',
 } as const;
+
+export const AuthenticationValidateMessage = {
+  EmailNotValid: 'The email is not valid',
+  DateBirthNotValid: 'The user date birth is not valid',
+} as const;
