@@ -58,4 +58,9 @@ export class AuthenticationController {
     const existUser = await this.authService.getUser(id);
     return existUser.toPOJO();
   }
+
+  @Get('/demo/:id')
+  public async demoPipe(@Param('id') id: number) {
+    console.log(typeof id);
+  }
 }

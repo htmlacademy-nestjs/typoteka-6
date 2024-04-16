@@ -27,3 +27,8 @@ Content-Type: application/json
 }
 
 ###
+
+# Demo route for Pipe
+GET http://localhost:3000/api/auth/demo/1 HTTP/1.1.
+
+###
