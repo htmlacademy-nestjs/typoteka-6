@@ -43,3 +43,14 @@ Content-Type: application/json
 }
 
 ###
+
+# Create a new comment for post
+POST http://localhost:3000/api/posts/ab04593b-da99-4fe3-8b4b-e06d82e2efdd/comments HTTP/1.1
+Content-Type: application/json
+
+{
+  "message": "This is text",
+  "userId": "65990102bb965b742900ba59"
+}
+
+###
