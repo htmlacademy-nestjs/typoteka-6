@@ -21,6 +21,7 @@
       "@project/blog-category": ["libs/blog/blog-category/src/index.ts"],
       "@project/blog-comment": ["libs/blog/blog-comment/src/index.ts"],
       "@project/blog-models": ["libs/blog/models/src/index.ts"],
+      "@project/blog-post": ["libs/blog/blog-post/src/index.ts"],
       "@project/blog-user": ["libs/account/blog-user/src/index.ts"],
       "@project/data-access": ["libs/shared/data-access/src/index.ts"],
       "@project/shared/core": ["libs/shared/core/src/index.ts"],
