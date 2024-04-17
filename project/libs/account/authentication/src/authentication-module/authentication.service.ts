@@ -1,24 +1,34 @@
 import dayjs from 'dayjs';
-import { ConflictException, Injectable, NotFoundException, UnauthorizedException } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
+import { JwtService } from '@nestjs/jwt';
+import {
+  ConflictException,
+  HttpException,
+  HttpStatus,
+  Injectable,
+  Logger,
+  NotFoundException,
+  UnauthorizedException
+} from '@nestjs/common';
 
 import { BlogUserRepository, BlogUserEntity } from '@project/blog-user';
-import { UserRole } from '@project/shared/core';
+import { Token, TokenPayload, User, UserRole } from '@project/shared/core';
 
 import { CreateUserDto } from '../dto/create-user.dto';
-import { AUTH_USER_EXISTS, AUTH_USER_NOT_FOUND, AUTH_USER_PASSWORD_WRONG } from './authentication.constant';
 import { LoginUserDto } from '../dto/login-user.dto';
+import {
+  AUTH_USER_EXISTS,
+  AUTH_USER_NOT_FOUND,
+  AUTH_USER_PASSWORD_WRONG
+} from './authentication.constant';
 
 @Injectable()
 export class AuthenticationService {
+  private readonly logger = new Logger(AuthenticationService.name);
+
   constructor(
     private readonly blogUserRepository: BlogUserRepository,
-    private readonly configService: ConfigService,
-  ) {
-    // Извлекаем настройки из конфигурации
-    console.log(configService.get<string>('db.host'));
-    console.log(configService.get<string>('db.user'));
-  }
+    private readonly jwtService: JwtService,
+  ) {}
 
   public async register(dto: CreateUserDto): Promise<BlogUserEntity> {
     const {email, firstname, lastname, password, dateBirth} = dto;
@@ -68,5 +78,23 @@ export class AuthenticationService {
     }
 
     return user;
+  }
+
+  public async createUserToken(user: User): Promise<Token> {
+    const payload: TokenPayload = {
+      sub: user.id,
+      email: user.email,
+      role: user.role,
+      lastname: user.lastname,
+      firstname: user.firstname,
+    };
+
+    try {
+      const accessToken = await this.jwtService.signAsync(payload);
+      return { accessToken };
+    } catch (error) {
+      this.logger.error('[Token generation error]: ' + error.message);
+      throw new HttpException('Ошибка при создании токена.', HttpStatus.INTERNAL_SERVER_ERROR);
+    }
   }
 }
