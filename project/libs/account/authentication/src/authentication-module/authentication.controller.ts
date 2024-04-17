@@ -1,5 +1,7 @@
-import { Body, Controller, Get, HttpStatus, Param, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpStatus, Param, Post, UseGuards } from '@nestjs/common';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
+
+import { MongoIdValidationPipe } from '@project/pipes';
 
 import { AuthenticationService } from './authentication.service';
 import { CreateUserDto } from '../dto/create-user.dto';
@@ -7,7 +9,8 @@ import { LoginUserDto } from '../dto/login-user.dto';
 import { LoggedUserRdo } from '../rdo/logged-user.rdo';
 import { UserRdo } from '../rdo/user.rdo';
 import { AuthenticationResponseMessage } from './authentication.constant';
-import { MongoIdValidationPipe } from '@project/pipes';
+import { JwtAuthGuard } from '../guards/jwt-auth.guard';
+import { fillDto } from '@project/shared/helpers';
 
 @ApiTags('authentication')
 @Controller('auth')
@@ -42,7 +45,8 @@ export class AuthenticationController {
   @Post('login')
   public async login(@Body() dto: LoginUserDto) {
     const verifiedUser = await this.authService.verifyUser(dto);
-    return verifiedUser.toPOJO();
+    const userToken = await this.authService.createUserToken(verifiedUser);
+    return fillDto(LoggedUserRdo, { ...verifiedUser.toPOJO(), ...userToken });
   }
 
   @ApiResponse({
@@ -60,6 +64,7 @@ export class AuthenticationController {
     return existUser.toPOJO();
   }
 
+  @UseGuards(JwtAuthGuard)
   @Get('/demo/:id')
   public async demoPipe(@Param('id') id: number) {
     console.log(typeof id);
