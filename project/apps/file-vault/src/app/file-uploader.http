@@ -1,0 +1,12 @@
+# Upload some file
+POST http://localhost:3000/api/files/upload HTTP/1.1
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="file"; filename="file-uploader.http"
+
+< ./file-uploader.http
+
+--boundary--
+
+###
