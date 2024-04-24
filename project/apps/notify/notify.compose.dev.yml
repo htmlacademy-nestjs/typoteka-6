@@ -7,3 +7,21 @@ services:
     ports:
       - "8025:8025"
       - "1085:8080"
+
+  typoteka.notify.rabbitmq:
+    image: rabbitmq:3.11-management
+    container_name: typoteka.notify.rabbitmq
+
+    ports:
+      - '1088:15672'
+      - '5672:5672'
+
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
+
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 5s
+      retries: 5
