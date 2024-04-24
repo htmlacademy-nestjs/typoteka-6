@@ -17,6 +17,7 @@
     "baseUrl": ".",
     "paths": {
       "@project/account-config": ["libs/account/config/src/index.ts"],
+      "@project/account-notify": ["libs/account/notify/src/index.ts"],
       "@project/authentication": ["libs/account/authentication/src/index.ts"],
       "@project/blog-category": ["libs/blog/blog-category/src/index.ts"],
       "@project/blog-comment": ["libs/blog/blog-comment/src/index.ts"],
