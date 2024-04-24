@@ -2,6 +2,7 @@ import 'multer';
 import { Inject, Injectable, Logger } from '@nestjs/common';
 import { ConfigType } from '@nestjs/config';
 import { ensureDir } from 'fs-extra';
+import dayjs from 'dayjs';
 import { writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
@@ -17,7 +18,8 @@ export class FileUploaderService {
   ) {}
 
   private getUploadDirectoryPath(): string {
-    return this.config.uploadDirectory;
+    const [year, month] = dayjs().format('YYYY MM').split(' ');
+    return join(this.config.uploadDirectory, year, month);
   }
 
   private getDestinationFilePath(filename: string): string {
