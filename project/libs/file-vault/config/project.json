@@ -1,0 +1,9 @@
+{
+  "name": "file-vault-config",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/file-vault/config/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project file-vault-config --web",
+  "targets": {}
+}
