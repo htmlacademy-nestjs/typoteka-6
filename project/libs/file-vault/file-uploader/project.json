@@ -1,0 +1,9 @@
+{
+  "name": "file-uploader",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/file-vault/file-uploader/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project file-uploader --web",
+  "targets": {}
+}
