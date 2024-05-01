@@ -29,7 +29,8 @@ Content-Type: application/json
 
 ###
 
-# Demo route for Pipe
-GET http://localhost:3000/api/auth/demo/1 HTTP/1.1.
+# Get new JWT pair
+POST http://localhost:3333/api/auth/refresh HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InVzZXJAbm90Zm91bmQubG9jYWwiLCJyb2xlIjoidXNlciIsImxhc3RuYW1lIjoiU21pdGgiLCJmaXJzdG5hbWUiOiJLZWtzIiwiaWF0IjoxNzA1NjgwMDA4LCJleHAiOjE3MDgyNzIwMDh9.10Jr7bWOiFTTi42JcMgPh0GVbxa2ikvn8vUVcF8d-AY
 
 ###
