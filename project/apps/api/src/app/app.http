@@ -15,3 +15,16 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIiLCJlbWFpb
 
 ###
 
+# Create a new post
+POST http://localhost:4000/api/blog HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDQwMzJmYmU0Y2FlYjg2OGM2ZWVjMzYiLCJlbWFpbCI6InVzZXJAbm90Zm91bmQubG9jYWwiLCJyb2xlIjoidXNlciIsImxhc3RuYW1lIjoiU21pdGgiLCJmaXJzdG5hbWUiOiJLZWtzIiwiaWF0IjoxNjgzMTI0MTA5LCJleHAiOjE2ODMxMjQ3MDl9.oHiIvy7hGEuDaI7e7Jspbcd68_5CMKNe2qzkMV6bDe8
+Content-Type: application/json
+
+{
+  "title": "Проверка!!",
+  "description": "Текст анонса",
+  "content": "Расширенный текст публикации",
+  "categories": [""]
+}
+###
+
