@@ -1,0 +1,4 @@
+---
+- name: Установить NVM (Node Version manager)
+  ansible.builtin.shell:
+    cmd: "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash"
